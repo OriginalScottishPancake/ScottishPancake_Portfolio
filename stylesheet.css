@@ -1,0 +1,102 @@
+/* BASIC RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: 'Press Start 2P', cursive;
+    background: linear-gradient(to bottom, #050018, #140033 60%, #1a004d);
+    color: white;
+    height: 100vh;
+    overflow-x: hidden;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    opacity: 0.95;
+}
+
+
+/* NAVIGATION BAR */
+.nav-bar {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    padding: 20px 40px;
+}
+
+
+.nav-bar ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+
+.nav-bar ul li a {
+    color: #ff66cc;
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+
+.nav-bar ul li a:hover {
+    color: #66ccff;
+    text-shadow: 0 0 10px #66ccff;
+}
+
+
+/* HERO SECTION */
+.hero {
+    margin-top: 120px;
+    text-align: center;
+}
+
+
+.title {
+    font-size: 48px;
+    background: linear-gradient(90deg, #66baff, #5f11ad);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 15px rgba(178, 102, 255, 0.5);
+}
+
+
+.subtitle {
+    margin-top: 20px;
+    font-size: 24px;
+    color: #ff66cc;
+    text-shadow: 0 0 10px rgba(255, 102, 204, 0.5);
+}
+
+
+/* HERO BUTTONS */
+.hero-buttons {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+
+.btn {
+    padding: 12px 25px;
+    border: 2px solid #ff66cc;
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    border-radius: 8px;
+    transition: 0.3s;
+    background-color: rgba(255, 102, 204, 0.1);
+}
+
+
+.btn:hover {
+    background-color: #ff66cc;
+    color: #050018;
+    box-shadow: 0 0 15px #ff66cc;
+}
