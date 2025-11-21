@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Me - Scottish Pancake</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+    <!-- NAVIGATION -->
+    <header class="main-header">
+        <nav class="nav-bar">
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="about.html">About Me</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- INTRO BOX -->
+    <section class="intro-box">
+        <h1>Hi, I'm Joanne. Also known as ScottishPancake!</h1>
+        <p>I'm a passionate game developer who loves creating immersive experiences and retro vibes. My focus is on
+            gameplay, visuals, and making projects fun!</p>
+    </section>
+
+    <!-- SKILLS CHART -->
+    <section class="skills-section">
+        <h2>My Skills</h2>
+
+        <div class="skill">
+            <span class="skill-name">Unity</span>
+            <div class="skill-bar">
+                <div class="skill-fill" style="width: 90%;"></div>
+            </div>
+        </div>
+
+        <div class="skill">
+            <span class="skill-name">C#</span>
+            <div class="skill-bar">
+                <div class="skill-fill" style="width: 90%;"></div>
+            </div>
+        </div>
+
+        <div class="skill">
+            <span class="skill-name">Unreal Engine</span>
+            <div class="skill-bar">
+                <div class="skill-fill" style="width: 2%;"></div>
+            </div>
+        </div>
+
+        <div class="skill">
+            <span class="skill-name">Pixel Art</span>
+            <div class="skill-bar">
+                <div class="skill-fill" style="width: 95%;"></div>
+            </div>
+        </div>
+
+        <div class="skill">
+            <span class="skill-name">Blender</span>
+            <div class="skill-bar">
+                <div class="skill-fill" style="width: 30%;"></div>
+            </div>
+        </div>
+
+        <div class="skill">
+            <span class="skill-name">HTML/CSS</span>
+            <div class="skill-bar">
+                <div class="skill-fill" style="width: 75%;"></div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        document.querySelectorAll('.skill-fill').forEach(el => {
+            const width = el.style.width;
+            el.style.width = '0';
+            setTimeout(() => { el.style.width = width; }, 500);
+        });
+    </script>
+
+</body>
+
+</html>
