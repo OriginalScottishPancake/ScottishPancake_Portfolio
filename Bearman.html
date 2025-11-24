@@ -15,7 +15,6 @@
         <nav class="nav-bar">
             <ul>
                 <li><a href="home.html">Home</a></li>
-                <li><a href="projects.html">Projects</a></li>
                 <li><a href="about.html">About Me</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
@@ -23,46 +22,43 @@
     </header>
 
     <section class="project-detail">
-        <h1>Beardman</h1>
+        <h1>Beardman adventures</h1>
 
+        <div class="project-flex">
 
-        <!-- Short summary box -->
-        <div class="project-summary">
+            <!-- LEFT SIDE — Showcase -->
+            <div class="project-left">
 
-            <!-- Main showcase -->
-            <div class="showcase-section">
                 <div class="main-showcase">
                     <img src="Images/wallpaper1.png" alt="Project Image" class="main-image" id="mainImage">
                 </div>
 
-                <!-- Thumbnails -->
                 <div class="thumbnails">
-                    <img src="Images/wallpaper1.png" alt="Thumbnail 1"
-                        onclick="changeShowcase('Images/wallpaper1.png')">
-                    <img src="Images/wallpaper2.png" alt="Thumbnail 2"
-                        onclick="changeShowcase('Images/wallpaper2.png')">
-                    <img src="Images/wavegrid.jpg" alt="Thumbnail 3" onclick="changeShowcase('Images/wavegrid.jpg')">
+                    <img src="Images/wallpaper1.png" onclick="changeShowcase('Images/wallpaper1.png')">
+                    <img src="Images/wallpaper2.png" onclick="changeShowcase('Images/wallpaper2.png')">
+                    <img src="Images/wavegrid.jpg" onclick="changeShowcase('Images/wavegrid.jpg')">
+                </div>
+
+                <div class="project-summary">
+                    <p>
+                        Vice Noire is a stylish platformer inspired by 80s neon aesthetics. Explore, jump,
+                        and battle enemies in a retro-futuristic cityscape.
+                    </p>
+                </div>
+
+            </div>
+
+            <!-- RIGHT SIDE — Info panel -->
+            <div class="project-right">
+                <div class="info-card">
+                    <p><strong>Genre:</strong> Platformer</p>
+                    <p><strong>Platform:</strong> PC, Console</p>
+                    <p><strong>Status:</strong> In Progress</p>
+                    <p><strong>Engine:</strong> Unity</p>
                 </div>
             </div>
 
-            <!-- Short summary box -->
-            <div class="project-summary">
-                <p>
-                    Vice Noire is a stylish platformer inspired by 80s neon aesthetics. Explore, jump, and battle
-                    enemies in
-                    a retro-futuristic cityscape.
-                </p>
-            </div>
-
-            <!-- Project information tags under the summary, centered horizontally -->
-            <div class="project-info">
-                <p><strong>Genre:</strong> Platformer</p>
-                <p><strong>Platform:</strong> PC, Console</p>
-                <p><strong>Status:</strong> In Progress</p>
-                <p><strong>Engine:</strong> Unity</p>
-            </div>
         </div>
-
     </section>
 
     <script>

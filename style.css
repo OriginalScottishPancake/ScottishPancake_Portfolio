@@ -38,6 +38,10 @@ body {
     transition: 0.3s;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 .nav-bar ul li a:hover {
     color: #66ccff;
     text-shadow: 0 0 10px #66ccff;
@@ -125,54 +129,66 @@ body {
 }
 
 .skills-section {
-    width: 80%;
-    max-width: 600px;
-    margin: 50px auto 100px auto;
-    font-family: 'Press Start 2P', cursive;
-    text-align: left;
-    color: #ffccff;
+    width: 85%;
+    max-width: 800px;
+    margin: 40px auto;
+    color: #66ccff;
+    font-family: 'Press Start 2P';
 }
 
 .skills-section h2 {
-    text-align: center;
-    font-size: 24px;
-    color: #66ccff;
-    text-shadow: 0 0 15px #ff66cc;
-    margin-bottom: 40px;
-}
-
-.skill {
-    margin-bottom: 25px;
-}
-
-.skill-name {
-    display: block;
-    margin-bottom: 8px;
-    font-size: 12px;
-    color: #ffccff;
+    font-size: 18px;
+    color: #ff66cc;
+    margin: 30px 0 10px;
     text-shadow: 0 0 10px #ff66cc;
 }
 
 .skill-bar {
-    width: 100%;
-    background-color: rgba(255, 102, 204, 0.1);
-    /* light transparent pink background */
+    background: rgba(102, 102, 255, 0.15);
     border: 2px solid #ff66cc;
-    border-radius: 8px;
-    height: 24px;
-    overflow: hidden;
-    box-shadow: 0 0 10px #ff66cc inset;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.skill-bar p {
+    margin: 0 0 6px 0;
+    font-size: 12px;
 }
 
 .skill-fill {
-    height: 100%;
-    background: linear-gradient(90deg, #66ffff, #ff66ff);
-    /* neon cyan → pink */
-    border-radius: 8px 0 0 8px;
-    transition: width 1.2s ease-in-out;
-    /* smooth width transition, also the speed of animation */
+    height: 10px;
+    border-radius: 6px;
+    background: linear-gradient(90deg, #ff66cc, #66ccff);
+    box-shadow: 0 0 10px #ff66cc;
+    transition: width 1s ease;
 }
 
+.pixel-avatar {
+    position: fixed;
+    bottom: 10px;
+    left: 1px;
+    /* or right: 20px */
+    width: 500px;
+    image-rendering: pixelated;
+    animation: floaty 3s ease-in-out infinite;
+    pointer-events: none;
+}
+
+@keyframes floaty {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-6px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
 
 /* ===== CONTACT PAGE ===== */
 .contact-section {
