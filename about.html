@@ -37,61 +37,77 @@
         <div class="skill-bar">
             <p>Dutch</p>
             <div class="skill-fill" style="width:100%"></div>
+            <span class="skill-label">Expert</span>
+
         </div>
         <div class="skill-bar">
             <p>English</p>
             <div class="skill-fill" style="width:100%"></div>
+            <span class="skill-label">Expert</span>
         </div>
         <div class="skill-bar">
             <p>German</p>
             <div class="skill-fill" style="width:40%"></div>
+            <span class="skill-label">Intermediate</span>
         </div>
 
         <h2>Programming Languages</h2>
         <div class="skill-bar">
             <p>C#</p>
             <div class="skill-fill" style="width:95%"></div>
+            <span class="skill-label">Expert</span>
         </div>
         <div class="skill-bar">
             <p>HTML/CSS</p>
-            <div class="skill-fill" style="width:80%"></div>
+            <div class="skill-fill" style="width:70%"></div>
+            <span class="skill-label">Intermediate</span>
         </div>
         <div class="skill-bar">
             <p>C++</p>
-            <div class="skill-fill" style="width:15%"></div>
+            <div class="skill-fill" style="width:2%"></div>
+            <span class="skill-label">Novice</span>
         </div>
         <div class="skill-bar">
             <p>Python</p>
             <div class="skill-fill" style="width:20%"></div>
+            <span class="skill-label">Beginner</span>
         </div>
         <div class="skill-bar">
             <p>JavaScript</p>
             <div class="skill-fill" style="width:20%"></div>
+            <span class="skill-label">Beginner</span>
         </div>
         <div class="skill-bar">
             <p>Java</p>
             <div class="skill-fill" style="width:25%"></div>
+            <span class="skill-label">Beginner</span>
         </div>
 
         <h2>Tools & Engines</h2>
         <div class="skill-bar">
             <p>Unity</p>
             <div class="skill-fill" style="width:95%"></div>
+            <span class="skill-label">Expert</span>
         </div>
         <div class="skill-bar">
             <p>Unreal Engine</p>
-            <div class="skill-fill" style="width:20%"></div>
+            <div class="skill-fill" style="width:5%"></div>
+            <span class="skill-label">Novice</span>
         </div>
         <div class="skill-bar">
             <p>Pixel Art</p>
             <div class="skill-fill" style="width:90%"></div>
+            <span class="skill-label">Expert</span>
         </div>
         <div class="skill-bar">
             <p>Blender</p>
             <div class="skill-fill" style="width:25%"></div>
+            <span class="skill-label">Beginner</span>
         </div>
 
     </section>
+
+
 
     <div>
         <img src="Gifs/AvatarSprite.gif" class="pixel-avatar">
@@ -104,6 +120,31 @@
             setTimeout(() => { el.style.width = width; }, 500);
         });
     </script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            document.querySelectorAll(".skill-bar").forEach(bar => {
+                const fill = bar.querySelector(".skill-fill");
+                const label = bar.querySelector(".skill-label");
+                const targetWidth = fill.style.width;
+
+                // Reset to animate from 0
+                fill.style.width = "0";
+
+                // Animate fill
+                setTimeout(() => {
+                    fill.style.width = targetWidth;
+
+                    // After fill animation finishes → show label
+                    setTimeout(() => {
+                        label.classList.add("show");
+                    }, 1500);
+
+                }, 200);
+            });
+        });
+    </script>
+
 
 </body>
 
